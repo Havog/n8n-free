@@ -17,8 +17,8 @@ jobs:
       - name: Healthcheck
         env:
           HF_REPO: ${{ vars.HF_REPO }}
-          TG_TOKEN: ${{ secrets.TG_TOKEN }}
-          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+          # TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          # TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |-
           if [ -z "$HF_REPO" ]; then
