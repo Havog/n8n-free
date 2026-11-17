@@ -1,1 +1,15 @@
+name: Hugging Face Space Keep-Alive
 
+on:
+  workflow_dispatch: # Allows manual dispatching from the GitHub UI or CLI
+  schedule:
+    - cron: '0 0 * * *' # Runs automatically every day at midnight UTC
+
+jobs:
+  ping-space:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Hugging Face Space
+        run: |
+          # Replace with your actual Space URL (found under Embed/Direct URL)
+          curl -f -I "https://mrkingstone-n8n-free.hf.space"
